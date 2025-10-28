@@ -50,7 +50,7 @@ const App = () => {
         contact: "Contacto",
         privacy: "Privacidad",
         resources: "Recursos",
-        footerAddress: "Hattiesburg (USA) · Buenos Aires (ARG)",
+        footerAddress: "Estadps Unidos (USA) · Buenos Aires (ARG)",
         prepare: "Preparación",
         analyze: "Análisis",
         eradicate: "Erradicación",
@@ -119,7 +119,7 @@ const App = () => {
         contact: "Contact",
         privacy: "Privacy",
         resources: "Resources",
-        footerAddress: "Hattiesburg (USA) · Buenos Aires (ARG)",
+        footerAddress: "United States (USA) · Buenos Aires (ARG)",
         prepare: "Preparation",
         analyze: "Analysis",
         eradicate: "Eradication",
@@ -1358,7 +1358,7 @@ const App = () => {
                   <MailIcon className="w-6 h-6 text-teal-500 mt-1" />
                   <div>
                     <h4 className="font-semibold text-lg mb-1">Email</h4>
-                    <p className={darkMode ? 'text-gray-300' : 'text-gray-600'}>info@tandemlens.com</p>
+                    <p className={darkMode ? 'text-gray-300' : 'text-gray-600'}>info@tandemlens.net</p>
                   </div>
                 </div>
                 
@@ -1366,7 +1366,7 @@ const App = () => {
                   <Phone className="w-6 h-6 text-teal-500 mt-1" />
                   <div>
                     <h4 className="font-semibold text-lg mb-1">Phone</h4>
-                    <p className={darkMode ? 'text-gray-300' : 'text-gray-600'}>+1 (601) 555-0123</p>
+                    <p className={darkMode ? 'text-gray-300' : 'text-gray-600'}>+1 (601) </p>
                   </div>
                 </div>
                 
@@ -1502,11 +1502,11 @@ const App = () => {
                 </div>
                 <div className="flex items-center">
                   <MailIcon className={`w-4 h-4 mr-2 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`} />
-                  <span className={darkMode ? 'text-gray-400' : 'text-gray-600'}>info@tandemlens.com</span>
+                  <span className={darkMode ? 'text-gray-400' : 'text-gray-600'}>info@tandemlens.net</span>
                 </div>
                 <div className="flex items-center">
                   <Phone className={`w-4 h-4 mr-2 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`} />
-                  <span className={darkMode ? 'text-gray-400' : 'text-gray-600'}>+1 (601) 555-0123</span>
+                  <span className={darkMode ? 'text-gray-400' : 'text-gray-600'}>+1 (601) </span>
                 </div>
               </div>
             </div>
