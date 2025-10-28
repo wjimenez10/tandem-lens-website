@@ -214,16 +214,49 @@ const App = () => {
   };
 
   // Handle form submission
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  const payload = {
+    name: formData.name,
+    email: formData.email,
+    company: formData.company,
+    message: formData.message,
+  };
+
+  try {
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(payload),
+    });
+
+    if (!res.ok) {
+      console.error('Error response from API', await res.text());
+      // podrías mostrar un mensaje de error en UI si querés
+      return;
+    }
+
+    // Si llega acá, el mail salió
     setFormSubmitted(true);
     setHasEverSubmittedForm(true);
+
+    // limpiar form
+    setFormData({ name: '', email: '', company: '', message: '' });
+
+    // cerrar popup eventualmente
     setTimeout(() => {
       setFormSubmitted(false);
-      setFormData({ name: '', email: '', company: '', message: '' });
+      setShowLeadPopup(false); // opcional
     }, 3000);
-  };
+  } catch (err) {
+    console.error('Network/JS error', err);
+  }
+};
+
+
 
   // ROI Calculator logic
   const [roiData, setRoiData] = useState({
