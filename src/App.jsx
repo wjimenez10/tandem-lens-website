@@ -50,7 +50,7 @@ const App = () => {
         contact: "Contacto",
         privacy: "Privacidad",
         resources: "Recursos",
-        footerAddress: "Estadps Unidos (USA) · Buenos Aires (ARG)",
+        footerAddress: "Estados Unidos (USA) · Buenos Aires (ARG)",
         prepare: "Preparación",
         analyze: "Análisis",
         eradicate: "Erradicación",
