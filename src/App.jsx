@@ -222,6 +222,7 @@ const App = () => {
     email: formData.email,
     company: formData.company,
     message: formData.message,
+    language: language || 'en', // o 'es' según el estado global o contexto actual
   };
 
   try {
@@ -234,28 +235,29 @@ const App = () => {
     });
 
     if (!res.ok) {
-      console.error('Error response from API', await res.text());
-      // podrías mostrar un mensaje de error en UI si querés
+      console.error('Error en la API', await res.text());
+      alert(language === 'es'
+        ? 'Hubo un error al enviar el mensaje. Intenta nuevamente.'
+        : 'There was an error sending your message. Please try again.');
       return;
     }
 
-    // Si llega acá, el mail salió
+    // Éxito → feedback al usuario
     setFormSubmitted(true);
-    setHasEverSubmittedForm(true);
+    alert(language === 'es'
+      ? 'Mensaje enviado correctamente. Te contactaremos pronto.'
+      : 'Message sent successfully. We will contact you soon.');
 
-    // limpiar form
+    // Limpiar el formulario
     setFormData({ name: '', email: '', company: '', message: '' });
-
-    // cerrar popup eventualmente
-    setTimeout(() => {
-      setFormSubmitted(false);
-      setShowLeadPopup(false); // opcional
-    }, 3000);
+    setTimeout(() => setFormSubmitted(false), 3000);
   } catch (err) {
-    console.error('Network/JS error', err);
+    console.error('Error de red', err);
+    alert(language === 'es'
+      ? 'Error de conexión. Verifica tu red.'
+      : 'Network error. Please check your connection.');
   }
 };
-
 
 
   // ROI Calculator logic
