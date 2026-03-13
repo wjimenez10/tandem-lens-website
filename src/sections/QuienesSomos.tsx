@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Shield, Lock, Network, Server, Award } from 'lucide-react';
+import { Shield, Lock, Network, Server, Cpu, Award } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
