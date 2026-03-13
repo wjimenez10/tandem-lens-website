@@ -1,4 +1,4 @@
-import { Shield, MapPin, Mail, Linkedin, Twitter, Github } from 'lucide-react';
+import { MapPin, Mail, Linkedin, Twitter, Github } from 'lucide-react';
 
 interface FooterProps {
   t: {
